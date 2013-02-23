@@ -1,0 +1,17 @@
+{
+  "name": "lazerwalker-hubot-scripts",
+  "version": "0.0.1",
+  "author": {
+    "name": "Michael Walker"
+  },
+  "description": "Some useful hubot scripts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazerwalker/hubot-osx-scripts.git"
+  },
+  "dependencies": {
+    "hubot": ">= 2.4.6",
+    "applescript": ">=0.2.1"
+  },
+  "engine": "node >= 0.8.x"
+}
