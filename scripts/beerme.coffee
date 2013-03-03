@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   beer Stone IPA - Returns a URL that resolves to the BA page for Stone IPA
+#   beer <BEER> - Returns a URL that resolves to the BA page for the given  beer
 #
 # Author:
 #   lazerwalker
