@@ -15,9 +15,9 @@
 
 AppleScript = require('AppleScript')
 module.exports = (robot) ->
-  robot.respond /o (.*) ?$/i, (msg) ->
+  robot.respond /of (.*) ?$/i, (msg) ->
     todo = msg.match[1]
-
+    
     string = "tell application \"OmniFocus\" to
     tell default document
     to parse tasks with transport text \"#{todo}\""
