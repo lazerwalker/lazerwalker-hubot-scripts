@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "hubot": ">= 2.4.6",
-    "applescript": ">=0.2.1"
+    "applescript": ">=0.2.1",
+    "nodemailer": "latest"
   },
   "engine": "node >= 0.8.x"
 }

@@ -2,27 +2,40 @@
 #   Adds a task to the OmniFocus inbox
 #
 # Dependencies:
-#   AppleScript
+#   Nodemailer
 #
 # Configuration:
-#   None
+#   (currently assumes you're using Gmail)
+#   HUBOT_GMAIL_USERNAME: Gmail username
+#   HUBOT_GMAIL_PASSWORD: Gmail password
+#   OMNI_MAIL_DROP_ADDRESS: Private OmniSyncServer address (see http://www.omnigroup.com/support/omnifocus-mail-drop)
 #
 # Commands:
-#   of Todo - Adds an inbox item in OmniFocus called 'Todo'
+#   of Todo - Adds an inbox item in OmniFocus with text 'Todo'
 #
 # Author:
 #   lazerwalker
 
-AppleScript = require('AppleScript')
 module.exports = (robot) ->
   robot.respond /of (.*) ?$/i, (msg) ->
     todo = msg.match[1]
-    
-    string = "tell application \"OmniFocus\" to
-    tell default document
-    to parse tasks with transport text \"#{todo}\""
 
-    AppleScript.execString string, (err, rtn) ->
+    console.log "ABOUT TO MAIL"
+
+    mail = require('nodemailer').createTransport "SMTP",
+      service: "Gmail"
+      auth:
+        user: process.env.HUBOT_GMAIL_USERNAME
+        pass: process.env.HUBOT_GMAIL_PASSWORD
+
+    from = process.env.HUBOT_EMAIL_SENDER
+    to = process.env.OMNI_MAIL_DROP_ADDRESS
+
+    console.log "ABOUT TO MESSAGE"
+
+    options = {from, to, subject: todo}
+    mail.sendMail options, (err, response) ->
+      console.log "SENT"
       if err
         msg.send "OmniFocus error! #{err}"
       else
