@@ -20,8 +20,6 @@ module.exports = (robot) ->
   robot.respond /of (.*) ?$/i, (msg) ->
     todo = msg.match[1]
 
-    console.log "ABOUT TO MAIL"
-
     mail = require('nodemailer').createTransport "SMTP",
       service: "Gmail"
       auth:
@@ -31,11 +29,8 @@ module.exports = (robot) ->
     from = process.env.HUBOT_EMAIL_SENDER
     to = process.env.OMNI_MAIL_DROP_ADDRESS
 
-    console.log "ABOUT TO MESSAGE"
-
     options = {from, to, subject: todo}
     mail.sendMail options, (err, response) ->
-      console.log "SENT"
       if err
         msg.send "OmniFocus error! #{err}"
       else
