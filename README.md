@@ -1,13 +1,11 @@
 ## Introduction
-A handful of Hubot scripts I've written to make my life easier. Many of these
-require AppleScript, so they won't help you if you're running Hubot on Heroku.
+A handful of Hubot scripts I've written to make my life easier.
 
 I run Hubot on my Mac so I can communicate with it via iMessage, giving me a
 Siri-like tool I can use via text message instead of voice.
-(see [hubot-imessage](http://github.com/lazerwalker/hubot-imessage))
+(See my [blog post](http://blog.lazerwalker.com/blog/2013/02/24/speak-no-siri-hear-no-siri/) on the topic for more info.)
 
-I don't really expect anyone else will be interested in these, but feel free to
-use or draw inspiration from them. Let me know if you do anything cool with 'em!
+Feel free to either use these directly or just use them as inspiration for your own Hubot scripts. Let me know if you do anything cool with 'em!
 
 
 ## Installation
@@ -21,11 +19,19 @@ If you don't have an external-scripts.json file, create a new file in your Hubot
 base dir that contains `["lazerwalker-huubot-scripts"]`. You now have an
 external-scripts.json file.
 
-I suppose I could publish this on npm, but it doesn't really feel appropriate.
 
+## Scripts
+
+### Productivity
+* GCal: Add a calendar event to your [Google Calendar](https://www.omnigroup.com/products/omnifocus/) with a plain English string (e.g. `cal lunch at 2pm with Jack`)
+* OmniFocus: Add an item to your [OmniFocus](https://www.omnigroup.com/products/omnifocus/) inbox (e.g. `of Take out the trash`)
+* Buxfer: Add an expense to your [Buxfer](http://buxfer.com) account, with optional tags (e.g. `$6 pizza lunch`)
+
+### Fun
+* Beer: Returns a URL to the Beer Advocate page for a given beer (e.g. `beer Stone IPA` gives you http://beeradvocate.com/beer/profile/147/88)
 
 ## License
-All scripts in this repo are (C) Michael Walker and published under the MIT license.
+All scripts in this repo are (c) Michael Walker and published under the MIT license.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
