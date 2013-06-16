@@ -25,6 +25,7 @@ external-scripts.json file.
 ### Productivity
 * GCal: Add a calendar event to your [Google Calendar](https://www.omnigroup.com/products/omnifocus/) with a plain English string (e.g. `cal lunch at 2pm with Jack`)
 * OmniFocus: Add an item to your [OmniFocus](https://www.omnigroup.com/products/omnifocus/) inbox (e.g. `of Take out the trash`)
+* Remember The Milk: Add an item to your [Remember The Milk](http://rememberthemilk.com) inbox
 * Buxfer: Add an expense to your [Buxfer](http://buxfer.com) account, with optional tags (e.g. `$6 pizza lunch`)
 
 ### Fun

@@ -12,7 +12,8 @@
   "dependencies": {
     "hubot": ">= 2.4.6",
     "googleapis": "latest",
-    "nodemailer": "latest"
+    "nodemailer": "latest",
+    "cafe-au-lait": "latest"
   },
   "engine": "node >= 0.8.x"
 }
