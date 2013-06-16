@@ -13,7 +13,8 @@
     "hubot": ">= 2.4.6",
     "googleapis": "latest",
     "nodemailer": "latest",
-    "cafe-au-lait": "latest"
+    "cafe-au-lait": "latest",
+    "applescript": "latest"
   },
   "engine": "node >= 0.8.x"
 }
